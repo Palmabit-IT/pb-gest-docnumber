@@ -16,13 +16,18 @@ Get next *document number* by using **getNext** function.
 angular.module('myApp', ['pbGestDocNumber'])
 
   .controller('myController', ['PbGestDocNumber', function (PbGestDocNumber) {
+
+    //EXAMPLE 1 (doctype has a class number)
     var doctype = {
       classNumber: '01234' //classNumber ID
     };
 
     PbGestDocNumber.get(doctype); //return null
     PbGestDocNumber.getNext(doctype); //return null
+    //END EXAMPLE 1
 
+
+    //EXAMPLE 2 (doctype hasn't a class number)
     doctype = {
       counter: [
         {
@@ -44,6 +49,8 @@ angular.module('myApp', ['pbGestDocNumber'])
 
     PbGestDocNumber.get(doctype, '003'); //return 0
     PbGestDocNumber.getNext(doctype, '003'); //return 1
+    //END EXAMPLE 2
+
   }]);
 ```
 
