@@ -2,6 +2,9 @@
 
 class PbDocNumber {
   static get(doctype, userId) {
+    return null;
+
+    /*
     if (!doctype) {
       return 0;
     }
@@ -21,6 +24,7 @@ class PbDocNumber {
     }
 
     return 0;
+    */
   }
 
   static getNext(doctype, userId) {

@@ -1,4 +1,4 @@
-/*! pb-gest-docnumber 0.1.0 - Copyright 2015 Palmabit <hello@palmabit.com> (http://www.palmabit.com/) */
+/*! pb-gest-docnumber 0.1.1 - Copyright 2015 Palmabit <hello@palmabit.com> (http://www.palmabit.com/) */
 'use strict';
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -13,25 +13,25 @@ var PbDocNumber = (function () {
   _createClass(PbDocNumber, null, [{
     key: 'get',
     value: function get(doctype, userId) {
+      return null;
+
+      /*
       if (!doctype) {
         return 0;
       }
-
-      if (typeof doctype.classNumber === 'string' && doctype.classNumber.length > 0) {
+       if (typeof doctype.classNumber === 'string' && doctype.classNumber.length > 0) {
         return null;
       }
-
-      if (!Array.isArray(doctype.counter)) {
+       if (!Array.isArray(doctype.counter)) {
         return 0;
       }
-
-      for (var i = 0; i < doctype.counter.length; i += 1) {
+       for (let i = 0; i < doctype.counter.length; i += 1) {
         if (doctype.counter[i].user === userId) {
           return parseInt(doctype.counter[i].number || 0);
         }
       }
-
-      return 0;
+       return 0;
+      */
     }
   }, {
     key: 'getNext',
